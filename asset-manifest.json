@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/portifolio/static/css/main.e6c13ad2.css",
+    "main.js": "/portifolio/static/js/main.f34e1110.js",
+    "static/js/453.9c226ca7.chunk.js": "/portifolio/static/js/453.9c226ca7.chunk.js",
+    "static/media/brunno.jpg": "/portifolio/static/media/brunno.944f5456aab0e632451d.jpg",
+    "index.html": "/portifolio/index.html",
+    "main.e6c13ad2.css.map": "/portifolio/static/css/main.e6c13ad2.css.map",
+    "main.f34e1110.js.map": "/portifolio/static/js/main.f34e1110.js.map",
+    "453.9c226ca7.chunk.js.map": "/portifolio/static/js/453.9c226ca7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.f34e1110.js"
+  ]
+}
