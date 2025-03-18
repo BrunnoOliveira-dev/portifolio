@@ -1,49 +1,58 @@
 import React from "react";
 import BaseCard from "./BaseCard";
 
-const containerStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "0.4rem",
-    gap: "1rem",
-};
+function CardConhecimentos({ title, nivel, resumo }) {
+	const containerStyle = {
+		display: "flex",
+		alignItems: "center",
+		width: "100%",
+		height: "100%",
+		padding: "0 1.5rem",
+	};
 
-const leftStyle = {
-    minWidth: "100px", // Mantém um tamanho mínimo
-    textAlign: "center",
-	backgroundColor: "#363B45",
-	height: "75px"
-};
+	const leftStyle = {
+		width: "97px",
+		textAlign: "center",
+		color: "#FFFFFF",
+		fontSize: "22px",
+		lineHeight: "29px",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
+	};
 
-const rightStyle = {
-    flex: 2,
-    textAlign: "left",
-    color: "#ffffff",
-};
+	const rightContainerStyle = {
+		flex: 1,
+		display: "flex",
+		flexDirection: "column",
+		paddingLeft: "1rem",
+	};
 
-const cardTitleStyle = {
-    margin: 0,
-    marginTop: "0.5rem",
-    marginBottom: "0.5rem",
-    color: "#ffffff",
-};
+	const rightStyle = {
+		color: "#FFFFFF",
+		fontSize: "13px",
+		lineHeight: "24px",
+		width: "calc(100% - 2rem)",
+	};
 
-function CardConhecimentos() {
-    return (
-        <BaseCard title="Python" width={790} height={75}>
-            <div style={containerStyle}>
-                <div style={leftStyle}>
-                    <h3 style={cardTitleStyle}>Python</h3>
-                </div>
-                <div style={rightStyle}>
-                    <p>
-                        O que pode fazer, O que pode fazer, O que pode fazer, O que pode fazer
-                    </p>
-                </div>
-            </div>
-        </BaseCard>
-    );
+	const nivelStyle = {
+		color: "#FFFFFF",
+		fontSize: "18px",
+		lineHeight: "29px",
+		marginBottom: "5px",
+	};
+
+	return (
+		<BaseCard width={700} height={90}>
+			<div style={containerStyle}>
+				<div style={leftStyle}>{title}</div>
+				<div style={rightContainerStyle}>
+					<div style={nivelStyle}>{nivel}</div>
+					<div style={rightStyle}>{resumo}</div>
+				</div>
+			</div>
+		</BaseCard>
+	);
 }
 
 export default CardConhecimentos;
