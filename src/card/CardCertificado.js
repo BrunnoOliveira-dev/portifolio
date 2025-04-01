@@ -52,9 +52,8 @@ function CardCertificado({ title, resumo, image, data, link }) {
 		display: "flex",
 		alignItems: "center",
 		justifyContent: "space-between",
-        flexWrap: "wrap",
+		flexWrap: "wrap",
 
-		
 		gap: "15rem",
 	};
 

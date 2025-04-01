@@ -2,12 +2,11 @@ import React from "react";
 import profilePicture from "./img/brunno.jpg";
 import profilePicture2 from "./img/brunno2.png";
 
-
 const LeftSection = () => {
-    const leftSectionStyle = {
+	const leftSectionStyle = {
 		width: "270px",
-		height: "610px",
-		padding: "2rem",
+		height: "100vh",
+		padding: "2rem 2rem 0rem 2rem",
 		borderRight: "1px solid #444",
 		display: "flex",
 		flexDirection: "column",
@@ -22,13 +21,14 @@ const LeftSection = () => {
 		backgroundOrigin: "initial",
 		backgroundClip: "initial",
 		backgroundColor: "#121416", // rgb(9, 10, 11), 090a0b, #1C1F22, #121416
+		overflow: "auto",
 
 		position: "fixed",
 	};
 
-    const profilePictureStyle = {
-		width: "200px",
-		height: "200px",
+	const profilePictureStyle = {
+		width: "220px",
+		height: "220px",
 		borderRadius: "50%",
 		backgroundColor: "#999",
 		marginBottom: "1rem",
@@ -38,27 +38,27 @@ const LeftSection = () => {
 		backgroundRepeat: "no-repeat",
 	};
 
-    const nameStyle = {
-		fontSize: "1.5rem",
+	const nameStyle = {
+		fontSize: "28px",
 		fontWeight: "bold",
 		marginBottom: "0.5rem",
 		color: "#ffffff",
 	};
 
-    const subTextTitelStyle = {
-		fontSize: "1rem",
+	const subTextTitelStyle = {
+		fontSize: "22px",
 		color: "#CBEAFB",
 		marginBottom: "0.5rem",
 	};
 
-    const subTextStyle = {
+	const subTextStyle = {
 		textAlign: "center",
-		marginBottom: "1rem",
 		color: "#818189",
+		fontSize: "18px",
 	};
 
-    const socialIconsStyle = {
-		marginTop: "auto",
+	const socialIconsStyle = {
+		marginTop: "4rem",
 		display: "flex",
 		gap: "3rem",
 	};

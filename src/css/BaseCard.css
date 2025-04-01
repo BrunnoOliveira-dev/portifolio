@@ -1,0 +1,6 @@
+.base-card:hover {
+    background: red; /* Gradiente azul ao passar o mouse */
+    background-color: red;
+    box-shadow: 0px 4px 20px rgba(0, 0, 255, 0.5); /* Sombra azul ao passar o mouse */
+    cursor: pointer; /* Muda o cursor para pointer */
+  }
