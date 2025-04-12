@@ -6,58 +6,82 @@ function CardPremiacoes({ medal, date, title, description, icon }) {
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
+		justifyContent: "space-between",
 		width: "100%",
 		height: "100%",
-		padding: "0.6rem",
+		padding: "0.8rem",
 		boxSizing: "border-box",
+		borderRadius: "15px",
+		transition: "transform 0.3s ease, box-shadow 0.3s ease",
+		cursor: "pointer",
 	};
 
 	const iconStyle = {
-		width: "70px",
-		height: "70px",
+		width: "72px",
+		height: "72px",
 		borderRadius: "50%",
-		boxShadow: "0 0 0 3px #CBEAFB, 0 0 0 5px transparent", // Adiciona um espaço de 2px entre a borda e a imagem
+		padding: "0.4rem",
+		boxShadow: "0 0 0 4px #CBEAFB, 0 0 10px rgba(0, 0, 0, 0.5)",
 		marginBottom: "1rem",
+		transition: "transform 0.3s ease",
 	};
 
 	const medalStyle = {
-		fontFamily: "Inter",
-		fontSize: "22px",
+		fontFamily: "'Roboto', sans-serif",
+		fontSize: "1.28rem",
 		fontWeight: "bold",
 		color: "#FFD700",
 		textTransform: "uppercase",
-		letterSpacing: "1px",
+		letterSpacing: "1.5px",
 		marginBottom: "0.5rem",
+		textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
 	};
 
 	const titleStyle = {
 		textAlign: "center",
-		fontFamily: "Inter",
-		fontSize: "14px",
+		fontFamily: "'Roboto', sans-serif",
+		fontSize: "1.2rem",
 		fontWeight: "bold",
 		color: "#CBEAFB",
-		marginBottom: "1rem",
+		marginBottom: "0.5rem",
+		textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
 	};
 
 	const descriptionStyle = {
-		width: "90%",
-		fontFamily: "Inter",
-		fontSize: "12px",
-		lineHeight: "20px",
+		width: "72%",
+		fontFamily: "'Roboto', sans-serif",
+		fontSize: "0.8rem",
 		color: "#A9A9A9",
-		maxWidth: "300px",
+		maxWidth: "240px",
 		marginBottom: "1rem",
+		textAlign: "center",
 	};
 
 	const dateStyle = {
-		fontFamily: "Inter",
-		fontSize: "16px",
+		fontFamily: "'Roboto', sans-serif",
+		fontSize: "0.72rem",
 		color: "#FFFFFF",
 		fontStyle: "italic",
+		textAlign: "center",
+	};
+
+	const handleMouseEnter = (e) => {
+		e.currentTarget.style.transform = "scale(1.05)";
+		e.currentTarget.style.boxShadow = "0px 8px 20px rgba(0, 0, 0, 0.4)";
+	};
+
+	const handleMouseLeave = (e) => {
+		e.currentTarget.style.transform = "scale(1)";
+		e.currentTarget.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.3)";
 	};
 
 	return (
-		<BaseCard width={270} height={310}>
+		<BaseCard
+			width={240}
+			height={280}
+			onMouseEnter={handleMouseEnter}
+			onMouseLeave={handleMouseLeave}
+		>
 			<div style={containerStyle}>
 				<img src={icon} alt="Ícone de premiação" style={iconStyle} />
 				<div style={medalStyle}>{medal}</div>

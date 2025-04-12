@@ -2,7 +2,7 @@ import React from "react";
 import Fullpage, {
 	FullPageSections,
 	FullpageSection,
-	FullpageNavigation,
+	FullpageNavigation, // Importação do componente de navegação
 } from "@ap.cx/react-fullpage";
 
 // Importando componentes de cards
@@ -28,19 +28,23 @@ const styles = {
 		flexDirection: "column",
 		gap: "2rem",
 		alignItems: "center",
-		backgroundColor: "#25272d",
+		backgroundColor: "#232a35",
+		padding: "2rem", // Adicionado espaçamento interno
+		borderRadius: "10px", // Bordas arredondadas
+		boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)", // Adicionada sombra para destaque
 	},
 	sectionTitle: {
 		color: "#00BFFF",
-		fontSize: "1.8rem",
+		fontSize: "2rem", // Ajustado tamanho da fonte
 		fontWeight: "bold",
 		textTransform: "uppercase",
 		letterSpacing: "2px",
 		marginBottom: "1.5rem",
 		borderBottom: "2px solid #00BFFF",
 		paddingBottom: "0.5rem",
-		textAlign: "center",
+		textAlign: "center", // Centralizado
 		width: "100%",
+		fontFamily: "'Roboto', sans-serif", // Fonte moderna
 	},
 	groupOfCards: {
 		display: "flex",
@@ -52,16 +56,46 @@ const styles = {
 		alignItems: "center",
 		justifyContent: "center",
 		flexWrap: "wrap",
-		gap: "2rem",
+		gap: "1.5rem", // Ajustado espaçamento entre os cartões
 		maxWidth: "1200px", // Define a largura máxima do contêiner
 		width: "100%", // Garante que o contêiner ocupe toda a largura disponível até o limite de maxWidth
 		margin: "0 auto", // Centraliza o contêiner horizontalmente
 	},
 };
 
+const categories = [
+    {
+        id: "conhecimentos",
+        title: "Conhecimentos",
+        description: "Habilidades e tecnologias que domino.",
+    },
+    {
+        id: "projetos",
+        title: "Projetos",
+        description: "Meus projetos mais relevantes.",
+    },
+    {
+        id: "certificados",
+        title: "Certificados",
+        description: "Cursos e certificações que concluí.",
+    },
+    {
+        id: "premiacoes",
+        title: "Premiações",
+        description: "Reconhecimentos e conquistas.",
+    },
+    {
+        id: "sobre",
+        title: "Sobre Mim",
+        description: "Informações pessoais e minha trajetória.",
+    },
+];
+
 const RightSection = () => {
 	return (
 		<Fullpage>
+			{/* Adiciona o indicador de progresso vertical */}
+			<FullpageNavigation />
 			<FullPageSections>
 				<FullpageSection style={styles.rightSection}>
 					<section id="conhecimentos" style={styles.groupOfCards}>

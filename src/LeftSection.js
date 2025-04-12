@@ -24,6 +24,7 @@ const LeftSection = () => {
 		overflow: "auto",
 
 		position: "fixed",
+		zIndex: 10, // Ensure the section is above other elements
 	};
 
 	const profilePictureStyle = {
@@ -39,14 +40,14 @@ const LeftSection = () => {
 	};
 
 	const nameStyle = {
-		fontSize: "28px",
+		fontSize: "1.5rem",
 		fontWeight: "bold",
 		marginBottom: "0.5rem",
 		color: "#ffffff",
 	};
 
 	const subTextTitelStyle = {
-		fontSize: "22px",
+		fontSize: "1.4rem",
 		color: "#CBEAFB",
 		marginBottom: "0.5rem",
 	};
@@ -54,7 +55,7 @@ const LeftSection = () => {
 	const subTextStyle = {
 		textAlign: "center",
 		color: "#818189",
-		fontSize: "18px",
+		fontSize: "1.1rem",
 	};
 
 	const socialIconsStyle = {
@@ -62,20 +63,19 @@ const LeftSection = () => {
 		gap: "3rem",
 		marginTop: "auto",
 		transform: "translateY(-50px)",
-		
+
 	};
 
 	return (
 		<div style={leftSectionStyle}>
 			<div style={profilePictureStyle}></div>
-			<h1 style={nameStyle}>Brunno Oliveira</h1>
+			<h1 style={nameStyle}>Brunno Oliveira Santos Lima</h1>
 			<p style={subTextStyle}>
 				Aluno do instituto federal da Paraíba campus Campina Grande (IFPB-CG)
 			</p>
 			<p style={subTextTitelStyle}>Sobre mim</p>
 			<p style={subTextStyle}>
-				Sou apaixonado por tecnologia e programar é um dos meus hobbies
-				favoritos. Adoro criar coisas novas e ver minhas ideias ganharem vida.
+				Sou Brunno Oliveira, Tecnico em Informatica pelo IFPB. Sou apaixonado por tecnologia e programação, tenho aprendido vario assuntos de programação como pode ser visto ao lado direito da pagina com meus projetos. <br></br><br></br>Adoro criar coisas novas e ver minhas ideias ganharem vida.
 			</p>
 
 			<div style={socialIconsStyle}>
@@ -88,14 +88,14 @@ const LeftSection = () => {
 					<img
 						src="https://img.icons8.com/?size=100&id=62856&format=png&color=ffffff"
 						alt="GitHub"
-						style={{ width: "40px" }}
+						style={{ width: "50px" }}
 					/>
 				</a>
 				<a href="mailto:oliveirabrunno290@gmail.com">
 					<img
 						src="https://img.icons8.com/?size=100&id=86840&format=png&color=ffffff"
 						alt="Email"
-						style={{ width: "40px" }}
+						style={{ width: "50px" }}
 					/>
 				</a>
 			</div>

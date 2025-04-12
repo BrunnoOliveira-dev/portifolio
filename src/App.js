@@ -9,7 +9,7 @@ export default function App() {
 
     const containerStyle = {
         display: "flex",
-        minHeight: "100v",
+        minHeight: "100vh",
         backgroundColor: "#2B2B2B",
         fontFamily: "sans-serif",
     };
