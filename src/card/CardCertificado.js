@@ -76,7 +76,7 @@ function CardCertificado({ title, resumo, image, data, link }) {
 	};
 
 	return (
-		<BaseCard width={550} height={530}>
+		<BaseCard width={"550px"} >
 			<div style={containerStyle}>
 				<div style={imageStyle}></div>
 				<div style={textContainerStyle}>
