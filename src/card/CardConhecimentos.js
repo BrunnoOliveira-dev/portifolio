@@ -1,55 +1,22 @@
 import React from "react";
 import BaseCard from "./BaseCard";
+import Progress from "../components/ui/progress";
 
 function CardConhecimentos({ title, nivel, resumo }) {
-	const containerStyle = {
-		display: "flex",
-		alignItems: "center",
-		width: "100%",
-		height: "100%",
-		padding: "0 1.5rem",
-	};
-
-	const leftStyle = {
-		width: "97px",
-		textAlign: "center",
-		color: "#FFFFFF",
-		fontSize: "22px",
-		lineHeight: "29px",
-		display: "flex",
-		alignItems: "center",
-		justifyContent: "center",
-	};
-
-	const rightContainerStyle = {
-		flex: 1,
-		display: "flex",
-		flexDirection: "column",
-		paddingLeft: "1rem",
-	};
-
-	const rightStyle = {
-		color: "#FFFFFF",
-		fontSize: "13px",
-		lineHeight: "24px",
-		width: "calc(100% - 2rem)",
-	};
-
-	const nivelStyle = {
-		color: "#FFFFFF",
-		fontSize: "18px",
-		lineHeight: "29px",
-		marginBottom: "5px",
-	};
+	const nivelPercentual = {
+		"Iniciante": 25,
+		"Intermediário": 50,
+		"Avançado": 75,
+		"Especialista": 100,
+	}[nivel] || 0;
 
 	return (
-		<BaseCard width={700} height={90}>
-			<div style={containerStyle}>
-				<div style={leftStyle}>{title}</div>
-				<div style={rightContainerStyle}>
-					<div style={nivelStyle}>{nivel}</div>
-					<div style={rightStyle}>{resumo}</div>
-				</div>
+		<BaseCard width={700} height={120} className="p-4 flex flex-col gap-2">
+			<h2 className="text-lg font-bold text-white">{title}</h2>
+			<p className="text-sm text-gray-300">{resumo}</p>
+			<div className="flex items-center gap-2">
+				<span className="text-xs text-gray-400">{nivel}</span>
+				<Progress value={nivelPercentual} className="w-full" />
 			</div>
 		</BaseCard>
 	);

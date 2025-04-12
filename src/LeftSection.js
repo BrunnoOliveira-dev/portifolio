@@ -4,7 +4,7 @@ import profilePicture2 from "./img/brunno2.png";
 
 const LeftSection = () => {
 	const leftSectionStyle = {
-		width: "270px",
+		width: "20vw",
 		height: "100vh",
 		padding: "2rem 2rem 0rem 2rem",
 		borderRight: "1px solid #444",
@@ -27,8 +27,8 @@ const LeftSection = () => {
 	};
 
 	const profilePictureStyle = {
-		width: "220px",
-		height: "220px",
+		width: "15vw",
+		height: "15vw",
 		borderRadius: "50%",
 		backgroundColor: "#999",
 		marginBottom: "1rem",
@@ -58,9 +58,11 @@ const LeftSection = () => {
 	};
 
 	const socialIconsStyle = {
-		marginTop: "4rem",
 		display: "flex",
 		gap: "3rem",
+		marginTop: "auto",
+		transform: "translateY(-50px)",
+		
 	};
 
 	return (
@@ -86,14 +88,14 @@ const LeftSection = () => {
 					<img
 						src="https://img.icons8.com/?size=100&id=62856&format=png&color=ffffff"
 						alt="GitHub"
-						style={{ width: "35px" }}
+						style={{ width: "40px" }}
 					/>
 				</a>
 				<a href="mailto:oliveirabrunno290@gmail.com">
 					<img
 						src="https://img.icons8.com/?size=100&id=86840&format=png&color=ffffff"
 						alt="Email"
-						style={{ width: "35px" }}
+						style={{ width: "40px" }}
 					/>
 				</a>
 			</div>
